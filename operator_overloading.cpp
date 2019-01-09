@@ -15,9 +15,9 @@ public:
     {
         real=r;imaginary=i;
     }
-    friend ccomplex operator+(ccomplex , ccomplex);
-    friend ccomplex operator-(ccomplex ,  ccomplex);
-    friend ostream &operator<<(ostream &out,ccomplex e);
+    friend ccomplex operator+(ccomplex &, ccomplex &);//Note i passed them as reference to save some space that would have been used to create copy of passed object.
+    friend ccomplex operator-(ccomplex &,  ccomplex &);
+    friend ostream &operator<<(ostream &,ccomplex);
 
 
 };
@@ -29,7 +29,7 @@ ostream &operator<<(ostream &out,ccomplex e)//overloading << operator
         out<<e.real<<" + "<<e.imaginary<<"i"<<endl;
     return out;
 }
-ccomplex operator+(ccomplex e1,ccomplex e2)
+ccomplex operator+(ccomplex &e1,ccomplex &e2)
 {
         ccomplex e3(0,0);
         e3.real=e1.real+e2.real;
@@ -37,7 +37,7 @@ ccomplex operator+(ccomplex e1,ccomplex e2)
 
         return e3;
 }
-ccomplex operator-(ccomplex e1,ccomplex e2)
+ccomplex operator-(ccomplex &e1,ccomplex &e2)
 {
         ccomplex e3(0,0);
         e3.real=e1.real-e2.real;
