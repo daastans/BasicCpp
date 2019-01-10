@@ -6,6 +6,7 @@ class demo
 private:
     int data;
 public:
+    demo():data(0){} // initialised data to 0
     void changedata(int j){data=j;}
     void showdata() const
     {
@@ -22,9 +23,11 @@ void demo::add(demo const &obj1,demo const &obj2)
 int main()
 {
     demo a,b,c;
+    const demo d;//this would not work without line number 9
     b.changedata(60);c.changedata(40);
     a.showdata();
     a.changedata(12);    a.showdata();
     a.add(b,c);          a.showdata();
+    /*d.changedata(40); illegal since d is const object*/
     return 0;
 }
