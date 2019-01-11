@@ -23,7 +23,7 @@ void demo::add(demo const &obj1,demo const &obj2)
 int main()
 {
     demo a,b,c;
-    const demo d;//this would not work without line number 9
+    const demo d;//this would not work without line number 9 ie. it requires data memeber to be initialised
     b.changedata(60);c.changedata(40);
     a.showdata();
     a.changedata(12);    a.showdata();
