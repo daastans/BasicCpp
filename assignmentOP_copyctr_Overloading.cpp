@@ -15,6 +15,8 @@ public:
         b=bre;
         std::cout<<"constructor invoked for obj "<<this<<std::endl;
     }
+    /*Note: parameter to copy ctor should be passed by reference otherwise to make
+    copy of argument again copy ctor will be called leading to infinte loop*/
     rectangle(rectangle &rect)//copy constructor overloading
     {
         std::cout<<"copy constructor invoked for obj "<<this<<std::endl;
