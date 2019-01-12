@@ -49,7 +49,7 @@ int main()
 
     string r("11");//constructor is called
     r.displaydata();
-    r=q;r.displaydata();//since q is string string constructor is called
+    r=q;r.displaydata();//This is assignment right but since there is no assignment operator overload compiler looks for constructor to do the same job hence calls constructor
 
     int c=int(q);//Conversion operator is called
     std::cout<<"Integer c is :"<<c<<std::endl;
