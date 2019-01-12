@@ -1,5 +1,5 @@
 
-/*In this case conversion routine is present in destination object*/
+/*In this case conversion routine is present in source object*/
 #include<iostream>
 #include<string>
 
