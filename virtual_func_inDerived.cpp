@@ -18,7 +18,11 @@ int main()
     b=&d;
     b->display();
     //b->fun();//This is illegal since Base has no function fun()
+    /*But you can typecaste b and then call function
+    */
+    ((Derived*)b)->fun();
     return 0;
+
 }
 /*
 Base VTABLE contains &Base::display
