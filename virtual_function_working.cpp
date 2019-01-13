@@ -63,4 +63,7 @@ the compiler uses the address of the base-class version of function in the deriv
 When objects of the base class or derived class are created compliler secretly places a pointer called  VPTR which points to the
 VTABLE when you make virtual function call through a base-class pointer the copiler quietly inserts code to fetch the vptr and look up the function address in
 the VTABLE , thus calling the right fucntion causing late binding to takae place.
+
+You maybe we wondering how compiler identifes vptr , usually all objects have vptr at same place
+ehich is starting of object usually
 */
